@@ -9,6 +9,7 @@ import {
   useWindowDimensions,
   SafeAreaView,
   StatusBar
+  
 } from 'react-native';
 import * as Location from 'expo-location';
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -94,8 +95,7 @@ export default function App() {
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar barStyle="light-content" backgroundColor="#0F172A" />
-      
-      {/* Header do App */}
+    
       <View style={styles.header}>
         <Text style={styles.headerTag}>AGRO INSPECT</Text>
         <Text style={styles.headerTitle}>Painel de Visita Técnica</Text>
@@ -103,11 +103,11 @@ export default function App() {
 
       <ScrollView contentContainerStyle={[styles.content, isLandscape && styles.contentLandscape]}>
         
-        {/* Painel Central de Telemetria e Captura */}
+      
         <View style={styles.mainCard}>
           <Text style={styles.cardHeader}>Painel de Auditoria</Text>
 
-          {/* Sensores GPS e Acelerômetro */}
+       
           <View style={styles.sensorsGrid}>
             <GpsIndicator accuracy={gpsAccuracy} error={gpsError} />
 
@@ -119,7 +119,7 @@ export default function App() {
             </View>
           </View>
 
-          {/* Botões de Ação */}
+       
           <View style={styles.actionContainer}>
             <CameraHandler 
               photoCaptured={photoCaptured} 
@@ -135,7 +135,7 @@ export default function App() {
           </View>
         </View>
 
-        {/* Lista de Histórico */}
+      
         <View style={styles.historyCardContainer}>
           <HistoryList history={history} />
         </View>

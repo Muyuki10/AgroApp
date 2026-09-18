@@ -27,7 +27,7 @@ export function CameraHandler({ photoCaptured, onPhotoCaptured }) {
       }
     }
 
-    // Abre a tela com o feed da câmera física
+
     setIsCameraOpen(true);
   };
 
@@ -57,7 +57,7 @@ export function CameraHandler({ photoCaptured, onPhotoCaptured }) {
         </Text>
       </TouchableOpacity>
 
-      {/* Modal para exibir o viewfinder da câmera em tela cheia */}
+     
       <Modal visible={isCameraOpen} animationType="slide">
         <View style={styles.cameraContainer}>
           <CameraView style={styles.camera} ref={cameraRef}>

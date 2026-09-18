@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from 'react-native';
 export function HistoryList({ history }) {
   return (
     <View style={styles.card}>
-      <Text style={styles.cardHeader}>Histórico Local (Offline)</Text>
+      <Text style={styles.cardHeader}>Histórico de Visitas (Offline)</Text>
       {history.length === 0 ? (
         <Text style={styles.emptyText}>Nenhum registro local armazenado.</Text>
       ) : (

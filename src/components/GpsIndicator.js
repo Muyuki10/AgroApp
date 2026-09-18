@@ -7,12 +7,12 @@ export function GpsIndicator({ accuracy, error }) {
       return { label: 'SEM SINAL', color: '#64748B', detail: 'Desativado' };
     }
     if (accuracy < 10) {
-      return { label: 'ALTA', color: '#22C55E', detail: `${accuracy.toFixed(1)}m` };
+      return { label: 'ALTA PRECISÃO', color: '#22C55E', detail: `${accuracy.toFixed(1)}m` };
     }
     if (accuracy <= 30) {
-      return { label: 'MÉDIA', color: '#EAB308', detail: `${accuracy.toFixed(1)}m` };
+      return { label: 'MÉDIA PRECISÃO', color: '#EAB308', detail: `${accuracy.toFixed(1)}m` };
     }
-    return { label: 'BAIXA', color: '#EF4444', detail: `${accuracy.toFixed(1)}m` };
+    return { label: 'BAIXA PRECISÃO', color: '#EF4444', detail: `${accuracy.toFixed(1)}m` };
   };
 
   const status = getGpsStatus();
